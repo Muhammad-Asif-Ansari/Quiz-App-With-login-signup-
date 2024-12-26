@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App[HTML,CSS,JAVASCRIPT]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <div class="container">
+      <h1>Select Quiz</h1>
+        <div class="card" onclick="startQuiz('html')">
+          <h3>HTML Quiz</h3>
+          <p>Test your HTML knowledge.</p>
+    </div>
+        <div class="card" onclick="startQuiz1('css')">
+          <h3>CSS Quiz</h3>
+          <p>Test your CSS skills.</p>
+        </div>
+        <div class="card" onclick="startQuiz2('javascript')">
+          <h3>JavaScript Quiz</h3>
+          <p>Challenge your JavaScript knowledge.</p>
+        </div>
+      </div>
+      
+   
+      
+
+
+
+
+
+    <script src="app.js"></script>
+    <script src="app1.js"></script>
+    <script src="app2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Selector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      min-height: 100vh;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      width: 250px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card" onclick="startQuiz('html')">
+      <h3>HTML Quiz</h3>
+      <p>Test your HTML knowledge.</p>
+    </div>
+    <div class="card" onclick="startQuiz('css')">
+      <h3>CSS Quiz</h3>
+      <p>Test your CSS skills.</p>
+    </div>
+    <div class="card" onclick="startQuiz('javascript')">
+      <h3>JavaScript Quiz</h3>
+      <p>Challenge your JavaScript knowledge.</p>
+    </div>
+  </div>
+
+  <script>
+    function startQuiz(topic) {
+      window.location.href = `quiz.html?topic=${topic}`;
+    }
+  </script>
+</body>
+</html> -->

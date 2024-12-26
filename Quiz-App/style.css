@@ -1,0 +1,218 @@
+   body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #1c1c1c;
+    color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 250px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #1c1c1c;
+    padding: 20px;
+    margin: 8px;
+    border-radius: 10px;
+    text-align: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 223, 0, 0.5);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 223, 0, 0.7);
+}
+
+.container {
+    display: flex;
+    margin: 8%;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.pageStyle {
+    background: #fff;
+    color: #1c1c1c;
+    width: 90%;
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 4%;
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.question {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.option-design {
+    background: linear-gradient(135deg, #444, #666);
+    color: #FFD700;
+    border: 1px solid #FFD700;
+    padding: 12px 18px;
+    margin: 8px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.option-design input[type="radio"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #FFD700;
+    border-radius: 50%;
+    outline: none;
+    margin-right: 15px;
+    cursor: pointer;
+    background: #1c1c1c;
+    transition: all 0.3s ease;
+}
+
+.option-design input[type="radio"]:checked {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    box-shadow: 0 0 10px rgba(255, 223, 0, 0.7);
+}
+
+.option-design input[type="radio"]:hover {
+    transform: scale(1.2);
+}
+
+.option-design span {
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn {
+    background: linear-gradient(135deg, #FFD700, #FFB400);
+    color: #1c1c1c;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(255, 223, 0, 0.5);
+    margin: 8px;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #FFB400, #FFD700);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(255, 223, 0, 0.7);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(255, 223, 0, 0.4);
+    background: linear-gradient(135deg, #FF8C00, #FFD700);
+}
+
+.btn:disabled {
+    background: #ccc; 
+    color: #777;
+    cursor: not-allowed; 
+    box-shadow: none;
+    transform: none; 
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3), 
+                 0 5px 15px rgba(255, 215, 0, 0.5);
+    padding: 10px 0;
+    border-bottom: 3px solid #FFD700;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.timer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-align: center;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    padding: 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+    width: fit-content;
+    margin: 45px auto;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.timer span {
+    display: inline-block;
+    font-size: 5rem;
+    color: #1c1c1c;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+.timer:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+
+    .btn {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .timer {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .timer {
+        font-size: 2rem;
+    }
+}

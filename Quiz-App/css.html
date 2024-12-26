@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS QUIZ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>CSS QUIZ</h1>
+  <div class="pageStyle">
+    <span id="timer" class="timer"></span>
+    <p id="question" class="question"></p>
+    <div>
+      <label class="option-design">
+        <input onchange="enableBtn()" value="1" type="radio" name="answer" />
+        <span id="option1"></span>
+      </label>
+    </div>
+    <div>
+      <label class="option-design">
+        <input onchange="enableBtn()" value="2" type="radio" name="answer" />
+        <span id="option2"></span>
+      </label>
+    </div>
+    <div>
+      <label class="option-design">
+        <input onchange="enableBtn()" value="3" type="radio" name="answer" />
+        <span id="option3"></span>
+      </label>
+    </div>
+
+    <button id="btn" class="btn" disabled onclick="nextQuestion()">Next</button>
+  </div>
+
+  <script src="app1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
