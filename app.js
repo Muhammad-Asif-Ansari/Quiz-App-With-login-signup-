@@ -32,61 +32,60 @@ function signup() {
   });
   window.location.href="login.html"
 }
-
-
 function login() {
-  var userName = document.getElementById("userName").value;
-  var password = document.getElementById("password").value;
-  var inputValue = localStorage.getItem("inputName");
-  var inputValuePassword = localStorage.getItem("inputPassword");
+    var userName = document.getElementById("userName").value;
+    var password = document.getElementById("password").value;
+    var inputValue = localStorage.getItem("inputName");
+    var inputValuePassword = localStorage.getItem("inputPassword");
 
-  if (userName.trim() === "" || password.trim() === "") {
-      Swal.fire({
-          icon: "error",
-          title: "Empty Fields!",
-          text: "Please fill in all fields before logging in.",
-          customClass: {
-              popup: 'vip-popup',
-              title: 'vip-title',
-              content: 'vip-content',
-              confirmButton: 'vip-confirm-button'
-          }
-      });
-      return;
-  }
-
-  if (userName === inputValue && password === inputValuePassword) {
-      Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Login Successfully",
-          showConfirmButton: false,
-          timer: 1500,
-          customClass: {
-              popup: 'vip-popup',
-              title: 'vip-title',
-              content: 'vip-content'
-          }
-      });
-  } else {
-      Swal.fire({
-          icon: "error",
-          title: "Invalid Email or Password",
-          text: "Login Failed!",
-          footer: '<a href="#">Why do I have this issue?</a>',
-          customClass: {
-              popup: 'vip-popup',
-              title: 'vip-title',
-              content: 'vip-content',
-              footer: 'vip-footer',
-              confirmButton: 'vip-confirm-button'
-          }
-          
-      });
-   
+    if (userName.trim() === "" || password.trim() === "") {
+        Swal.fire({
+            icon: "error",
+            title: "Empty Fields!",
+            text: "Please fill in all fields before logging in.",
+            customClass: {
+                popup: 'vip-popup',
+                title: 'vip-title',
+                content: 'vip-content',
+                confirmButton: 'vip-confirm-button'
+            }
+        });
+        return;
     }
-    window.location.href="Quiz-App/index.html"
 
+    if (userName === inputValue && password === inputValuePassword) {
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Login Successfully",
+            showConfirmButton: false,
+            timer: 1500,
+            customClass: {
+                popup: 'vip-popup',
+                title: 'vip-title',
+                content: 'vip-content'
+            }
+        }).then(() => {
+            // Clear the input fields after successful login
+            document.getElementById("userName").value = "";
+            document.getElementById("password").value = "";
+            window.location.href = "Quiz-App/index.html";
+        });
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Invalid Email or Password",
+            text: "Login Failed!",
+            footer: '<a href="#">Why do I have this issue?</a>',
+            customClass: {
+                popup: 'vip-popup',
+                title: 'vip-title',
+                content: 'vip-content',
+                footer: 'vip-footer',
+                confirmButton: 'vip-confirm-button'
+            }
+        });
+    }
 }
 
 var style = document.createElement('style');
